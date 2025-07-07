@@ -4,13 +4,12 @@ A ready-to-use Docker boilerplate that sets up a local development environment w
 
 Simply clone the project, configure your environment with the provided `.env.template`, and start developing in minutes!
 
-## 🚀 Features
+## Requirements
 
 Docker
 Docker desktop (optional but recommended)
 
-## 🚀 Features
-
+## Features
 
 - Django app running on Python
 - PostgreSQL database
@@ -27,7 +26,6 @@ Docker desktop (optional but recommended)
 Create the .env file
 
 	cp .env.template .env
-
 
 Build the Docker containers:
 
@@ -61,6 +59,3 @@ To stop and remove volumes (use with caution):
 
 	docker compose down -v
 
-## Conclusions
-
-Of course you can use tools like Docker desktop to easily manage your containers.
