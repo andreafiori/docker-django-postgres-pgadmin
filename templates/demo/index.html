@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Django Boilerplate</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      display: grid; place-items: center; min-height: 100vh; margin: 0;
+      background: #f6f7f9; color: #1f2328;
+    }
+    main { text-align: center; padding: 2rem; }
+    .badge {
+      display: inline-block; padding: .25rem .75rem; border-radius: 999px;
+      font-size: .85rem; font-weight: 600; margin-bottom: .5rem;
+    }
+    .ok { background: #dcffe4; color: #116329; }
+    .bad { background: #ffe5e5; color: #a40e26; }
+    ul { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+    li { margin: .5rem 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Django + Postgres boilerplate &nbsp;🐍</h1>
+    <p class="badge {{ "ok" if db_status == "connected" else "bad" }}">
+      PostgreSQL: {{ db_status }}
+    </p>
+    <p>If you can see this page, the Docker (or local) environment is working.</p>
+    <ul>
+      <li><a href="/health/">/health/</a> — health probe</li>
+      <li><a href="/admin/">/admin/</a> — Django admin</li>
+      <li><a href="https://localhost:5555/">pgAdmin</a> — database GUI</li>
+    </ul>
+  </main>
+</body>
+</html>
